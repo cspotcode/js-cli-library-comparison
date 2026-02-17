@@ -8,9 +8,9 @@
         "@bomb.sh/tab": "^0.0.13",
         "@clack/prompts": "^1.0.0",
         "@drizzle-team/brocli": "^0.11.0",
-        "@optique/config": "^0.10.1",
-        "@optique/core": "^0.10.1",
-        "@optique/run": "^0.10.1",
+        "@optique/config": "^0.10.2",
+        "@optique/core": "^0.10.2",
+        "@optique/run": "^0.10.2",
         "@stricli/auto-complete": "^1.2.5",
         "@stricli/core": "^1.2.5",
         "clipanion": "^4.0.0-rc.4",
@@ -38,11 +38,11 @@
 
     "@drizzle-team/brocli": ["@drizzle-team/brocli@0.11.0", "", {}, "sha512-hD3pekGiPg0WPCCGAZmusBBJsDqGUR66Y452YgQsZOnkdQ7ViEPKuyP4huUGEZQefp8g34RRodXYmJ2TbCH+tg=="],
 
-    "@optique/config": ["@optique/config@0.10.1", "", { "dependencies": { "@optique/core": "0.10.1" }, "peerDependencies": { "@standard-schema/spec": "^1.1.0" } }, "sha512-ncbIqlI4vbtYkMOKKF8NJSL7ZhrJTxAhp22Q7rJ/dI3pwPP13s03gIszVdgIecnVV4JuHuiayPAW3Ii+kREvwg=="],
+    "@optique/config": ["@optique/config@0.10.2", "", { "dependencies": { "@optique/core": "0.10.2" }, "peerDependencies": { "@standard-schema/spec": "^1.1.0" } }, "sha512-TpknV699FmK0fNcPYB3hgqcbuQy0OjGnsmPdzyBd+dXK63Cck1CRErR6AqJJ9oFJcNvuLrNJ53pRz6JZlJV+ZQ=="],
 
-    "@optique/core": ["@optique/core@0.10.1", "", {}, "sha512-AGe6Si5saE9x9z6Po13+9ZAZEymIU5Wv3ImOJ9Lz0SSnlRTIwc3q/62U1lb08Kk2vblDJiX7Of6n09OYRQNLNw=="],
+    "@optique/core": ["@optique/core@0.10.2", "", {}, "sha512-aCa3zdGSCbaHSY68LNEW4bpCSdZ0Vu5tmD6OvnD9Rtc8O2P9n99SrYJLxRmJlICdq71yjn7NZnewqYylZHuZUg=="],
 
-    "@optique/run": ["@optique/run@0.10.1", "", { "dependencies": { "@optique/core": "0.10.1" } }, "sha512-3KhxiFiYQz5Jf4g50vliEdViMBaXx6JdV3ujtzpy6P69Y0O70b5pcBpXOh4uOxbfEKKnUt2kRVn56SS3wberog=="],
+    "@optique/run": ["@optique/run@0.10.2", "", { "dependencies": { "@optique/core": "0.10.2" } }, "sha512-aPEA+Piz6S9NbfoyKWvVV4TCZZjBAiw2yZ9W1czUXcq5C9A37RtC+7Zqj97l7MHaxjTlvr9xWpuAhceXFJV1mA=="],
 
     "@oxfmt/darwin-arm64": ["@oxfmt/darwin-arm64@0.28.0", "", { "os": "darwin", "cpu": "arm64" }, "sha512-jmUfF7cNJPw57bEK7sMIqrYRgn4LH428tSgtgLTCtjuGuu1ShREyrkeB7y8HtkXRfhBs4lVY+HMLhqElJvZ6ww=="],
 
