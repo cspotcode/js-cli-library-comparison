@@ -1,0 +1,35 @@
+import * as o from '@optique/core';
+
+export default o.command(
+  'verify',
+  o.object({
+    action: o.constant('verify'),
+    artifact: o.argument(o.string(), { description: o.message`File path or oci://<image-uri>` }),
+    bundle: o.option('-b', '--bundle', o.string(), { description: o.message`Path to bundle on disk` }),
+    bundleFromOci: o.option('--bundle-from-oci', { description: o.message`Fetch the attestation bundle from the OCI registry instead of from GitHub` }),
+    certIdentity: o.option('--cert-identity', o.string(), { description: o.message`Enforce that the certificate's SubjectAlternativeName matches the provided value exactly` }),
+    certIdentityRegex: o.option('-i', '--cert-identity-regex', o.string(), { description: o.message`Enforce that the certificate's SubjectAlternativeName matches the provided regex` }),
+    certOidcIssuer: o.option('--cert-oidc-issuer', o.string(), { description: o.message`Enforce that the issuer of the OIDC token matches the provided value` }),
+    customTrustedRoot: o.option('--custom-trusted-root', o.string(), { description: o.message`Path to a trusted_root.jsonl file; likely for offline verification` }),
+    denySelfHostedRunners: o.option('--deny-self-hosted-runners', { description: o.message`Fail verification for attestations generated on self-hosted runners` }),
+    digestAlg: o.option('-d', '--digest-alg', o.string(), { description: o.message`The algorithm used to compute a digest of the artifact: {sha256|sha512} (default "sha256")` }),
+    format: o.option('--format', o.string(), { description: o.message`Output format: {json}` }),
+    hostname: o.option('--hostname', o.string(), { description: o.message`Configure host to use` }),
+    jq: o.option('-q', '--jq', o.string(), { description: o.message`Filter JSON output using a jq expression` }),
+    limit: o.option('-L', '--limit', o.string(), { description: o.message`Maximum number of attestations to fetch (default 30)` }),
+    noPublicGood: o.option('--no-public-good', { description: o.message`Do not verify attestations signed with Sigstore public good instance` }),
+    owner: o.option('-o', '--owner', o.string(), { description: o.message`GitHub organization to scope attestation lookup by` }),
+    predicateType: o.option('--predicate-type', o.string(), { description: o.message`Enforce that verified attestations' predicate type matches the provided value` }),
+    repo: o.option('-R', '--repo', o.string(), { description: o.message`Repository name in the format <owner>/<repo>` }),
+    signerDigest: o.option('--signer-digest', o.string(), { description: o.message`Enforce that the digest associated with the signer workflow matches the provided value` }),
+    signerRepo: o.option('--signer-repo', o.string(), { description: o.message`Enforce that the workflow that signed the attestation's repository matches the provided value` }),
+    signerWorkflow: o.option('--signer-workflow', o.string(), { description: o.message`Enforce that the workflow that signed the attestation matches the provided value` }),
+    sourceDigest: o.option('--source-digest', o.string(), { description: o.message`Enforce that the digest associated with the source repository matches the provided value` }),
+    sourceRef: o.option('--source-ref', o.string(), { description: o.message`Enforce that the git ref associated with the source repository matches the provided value` }),
+    template: o.option('-t', '--template', o.string(), { description: o.message`Format JSON output using a Go template; see "gh help formatting"` }),
+  }),
+  {
+    brief: o.message`Verify an artifact's integrity using attestations`,
+    description: o.message`Verify the integrity and provenance of an artifact using its associated cryptographically signed attestations.`,
+  },
+);
