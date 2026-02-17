@@ -9,7 +9,9 @@ Each of these CLI frameworks is being demo'd by implementing our sample CLI inte
 
 brocli: https://github.com/drizzle-team/brocli
 Clipanion: https://mael.dev/clipanion
-cmd-ts: https://github.com/Schniz/cmd-ts/blob/main/README.md
+cmd-ts:
+  https://cmd-ts.vercel.app/
+  https://github.com/Schniz/cmd-ts/blob/main/README.md
 Optique: https://optique.dev/
 stricli: https://bloomberg.github.io/stricli/
 yargs: https://yargs.js.org/docs/
@@ -25,6 +27,11 @@ commander.js: https://github.com/tj/commander.js
 cliffy: https://cliffy.io/
 cleye: https://github.com/privatenumber/cleye
 gunshi: https://gunshi.dev/guide/introduction/what-is-gunshi
+cac: https://github.com/cacjs/cac
+citty: https://github.com/unjs/citty
+
+@bomb.sh/tab: https://github.com/bombshell-dev/tab
+  Only implements completions, not arg parsing. Meant to be adopted by CLI parsing libraries to implement completions
 
 ## Implementation guidelines
 

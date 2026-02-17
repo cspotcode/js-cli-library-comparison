@@ -14,7 +14,10 @@ Run bare
 Run with --help
 Run subcommand bare and with --help
 Run `nested` group bare and with --help, does it describe the subcommands?
-Run with validation error: wrong flag, missing required flag or option
+Run with validation error: missing required flag or option
+Run with validation error: invalid flag value
+Run with validation error: missing subcommand
+Run with validation error: incorrectly named subcommand, similar to correct name (to demo levenshien distance)
 
 For each output for each competing library, capture the output into a colorized HTML document. This means running the command in a tty, capturing stdout, passing it through an ANSI-to-HTML converter.
 
