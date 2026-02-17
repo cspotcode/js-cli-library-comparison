@@ -42,30 +42,37 @@ lint-fix:
 # Execute all CLI demos, passing the same set of positional arguments and flags
 demo *ARGS:
   just _divider
-  just demo-stricli "$@" || true
+  just demo-brocli "$@" || true
   just _divider
-  just demo-cmdts "$@" || true
+  just demo-clipanion "$@" || true
+  just _divider
+  just demo-cmd-ts "$@" || true
   just _divider
   just demo-optique "$@" || true
   just _divider
-  just demo-clipanion "$@" || true
+  just demo-stricli "$@" || true
+  just _divider
+  just demo-yargs "$@" || true
   just _divider
 
 @_divider:
   bun --eval 'console.log("\x1b[30;47m" + " ".repeat(process.stdout.columns) + "\x1b[0m")'
 
-demo-stricli *ARGS:
-  @# cd my-app && bun ./src/bin/cli.ts "$@"
-  bun ./src/main-stricli.ts "$@"
+demo-brocli *ARGS:
+  bun ./src/main-brocli.ts "$@"
 
-demo-cmdts *ARGS:
+demo-clipanion *ARGS:
+  bun ./src/main-clipanion.ts "$@"
+
+demo-cmd-ts *ARGS:
   bun ./src/main-cmd-ts.ts "$@"
 
 demo-optique *ARGS:
   bun ./src/main-optique.ts "$@"
 
-demo-clipanion *ARGS:
-  bun ./src/main-clipanion.ts "$@"
+demo-stricli *ARGS:
+  @# cd my-app && bun ./src/bin/cli.ts "$@"
+  bun ./src/main-stricli.ts "$@"
 
 demo-yargs *ARGS:
   bun ./src/main-yargs.ts "$@"
