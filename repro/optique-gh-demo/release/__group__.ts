@@ -11,11 +11,6 @@ import view from "./view.ts";
 
 export default o.command(
   "release",
-  o.or(
-    o.group(
-      "Available commands",
-      o.or(create, list, delete_, deleteAsset, download, edit, upload, view),
-    ),
-  ),
+  o.or(create, list, delete_, deleteAsset, download, edit, upload, view),
   { brief: o.message`Manage releases` },
 );

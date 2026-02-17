@@ -8,12 +8,6 @@ import status from "./status.ts";
 import switchCmd from "./switch.ts";
 import token from "./token.ts";
 
-export default o.command(
-  "auth",
-  o.or(
-    o.group("AVAILABLE COMMANDS", o.or(login, logout, refresh, setupGit, status, switchCmd, token)),
-  ),
-  {
-    brief: o.message`Authenticate gh and git with GitHub`,
-  },
-);
+export default o.command("auth", o.or(login, logout, refresh, setupGit, status, switchCmd, token), {
+  brief: o.message`Authenticate gh and git with GitHub`,
+});

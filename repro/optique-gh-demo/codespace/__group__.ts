@@ -15,12 +15,7 @@ import view from "./view.ts";
 
 export default o.command(
   "codespace",
-  o.or(
-    o.group(
-      "AVAILABLE COMMANDS",
-      o.or(code, cp, create, delete_, edit, list, logs, ports, rebuild, ssh, stop, view),
-    ),
-  ),
+  o.or(code, cp, create, delete_, edit, list, logs, ports, rebuild, ssh, stop, view),
   {
     brief: o.message`Connect to and manage codespaces`,
     description: o.message`Also aliased as "cs".`,

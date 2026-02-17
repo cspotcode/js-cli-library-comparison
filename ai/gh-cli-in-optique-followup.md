@@ -10,9 +10,10 @@ all subcommands, flags, and help descriptions. The goal is to be able to run `op
 
 # Followup task, cleanup, improvements:
 
-- Ensure commands are listed in `--help` output in the correct order, matching the original `gh` output.
-- Inconsistent application of "Available commands" sub-grouping. If the group name is "available commands", that's the Cobra default, don't call group()
-- Trailing colons in group names: omit them, they'll be emitted by optique's help formatter
+The initial implementation had some flaws. Fix the following. [DONE] means it's been implemented already:
+
+- [DONE] Inconsistent application of "Available commands" sub-grouping. If the group name is "available commands", that's the Cobra default, don't call `group()` in that case.
+- [DONE] Trailing colons in group names: omit them, they'll be emitted by optique's help formatter
 - some things mentioned in help text should be wrapped as follows, to format in the correct colors:
   - flags wrapped as ${optionName("--verbose")} 
   - urls as ${link("https://example.com")}
