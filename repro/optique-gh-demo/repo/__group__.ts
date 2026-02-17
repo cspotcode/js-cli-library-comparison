@@ -18,5 +18,5 @@ export default o.command(
     o.group('GENERAL COMMANDS', o.or(create, list)),
     o.group('TARGETED COMMANDS', o.or(archive, clone, delete_, edit, fork, rename, setDefault, sync, unarchive, view)),
   ),
-  { brief: o.message`Manage repositories` },
+  { brief: o.message`Manage repositories`, description: o.message`Work with GitHub repositories.` },
 );

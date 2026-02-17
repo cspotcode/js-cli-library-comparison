@@ -10,6 +10,25 @@ export default o.command(
   o.or(code, commits, issues, prs, repos),
   {
     brief: o.message`Search for repositories, issues, and pull requests`,
-    description: o.message`Search across all of GitHub.`,
+    description: o.message`Search across all of GitHub.
+
+Excluding search results that match a qualifier
+
+In a browser, the GitHub search syntax supports excluding results that match a search qualifier by prefixing the qualifier with a hyphen. For example, to search for issues that do not have the label "bug", you would use \`-label:bug\` as a search qualifier.
+
+\`gh\` supports this syntax in \`gh search\` as well, but it requires extra command line arguments to avoid the hyphen being interpreted as a command line flag because it begins with a hyphen.
+
+On Unix-like systems, you can use the \`--\` argument to indicate that the arguments that follow are not a flag, but rather a query string. For example:
+
+$ gh search issues -- "my-search-query -label:bug"
+
+On PowerShell, you must use both the \`--%\` argument and the \`--\` argument to produce the same effect. For example:
+
+$ gh --% search issues -- "my search query -label:bug"
+
+See the following for more information:
+- GitHub search syntax: ${o.link("https://docs.github.com/en/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#exclude-results-that-match-a-qualifier")}
+- The PowerShell stop parse flag \`--%\`: ${o.link("https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_parsing?view=powershell-7.5#the-stop-parsing-token")}
+- The Unix-like \`--\` argument: ${o.link("https://www.gnu.org/software/bash/manual/bash.html#Shell-Builtin-Commands-1")}`,
   },
 );

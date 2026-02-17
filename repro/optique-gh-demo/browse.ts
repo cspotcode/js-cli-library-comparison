@@ -34,6 +34,12 @@ export default o.command(
   }),
   {
     brief: o.message`Open repositories, issues, pull requests, and more in the browser`,
-    description: o.message`Transition from the terminal to the web browser to view and interact with issues, pull requests, repository content, and more.`,
+    description: o.message`Transition from the terminal to the web browser to view and interact with:
+
+- Issues
+- Pull requests
+- Repository content
+- Repository home page
+- Repository settings`,
   },
 );

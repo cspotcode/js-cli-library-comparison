@@ -21,8 +21,8 @@ export default o.command(
     brief: o.message`Create a new gist`,
     description: o.message`Create a new GitHub gist with given contents.
 
-Gists can be created from one or multiple files. Alternatively, pass - as filename to read from standard input.
+Gists can be created from one or multiple files. Alternatively, pass \`-\` as filename to read from standard input.
 
-By default, gists are secret; use --public to make publicly listed ones.`,
+By default, gists are secret; use ${o.optionName("--public")} to make publicly listed ones.`,
   },
 );

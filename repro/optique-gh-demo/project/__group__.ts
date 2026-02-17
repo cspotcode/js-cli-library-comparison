@@ -43,5 +43,10 @@ export default o.command(
     unlink,
     view,
   ),
-  { brief: o.message`Work with GitHub Projects` },
+  {
+    brief: o.message`Work with GitHub Projects`,
+    description: o.message`Work with GitHub Projects.
+
+The minimum required scope for the token is: \`project\`. You can verify your token scope by running \`gh auth status\` and add the \`project\` scope by running \`gh auth refresh ${o.optionName("-s")} project\`.`,
+  },
 );

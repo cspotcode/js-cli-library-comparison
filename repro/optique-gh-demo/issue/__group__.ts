@@ -21,5 +21,5 @@ export default o.command(
     o.group('GENERAL COMMANDS', o.or(create, list, status)),
     o.group('TARGETED COMMANDS', o.or(close, comment, delete_, develop, edit, lock, pin, reopen, transfer, unlock, unpin, view)),
   ),
-  { brief: o.message`Manage issues` },
+  { brief: o.message`Manage issues`, description: o.message`Work with GitHub issues.` },
 );

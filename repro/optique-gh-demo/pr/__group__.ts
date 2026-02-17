@@ -24,5 +24,5 @@ export default o.command(
     o.group('GENERAL COMMANDS', o.or(create, list, status)),
     o.group('TARGETED COMMANDS', o.or(checkout, checks, close, comment, diff, edit, lock, merge, ready, reopen, revert, review, unlock, updateBranch, view)),
   ),
-  { brief: o.message`Manage pull requests` },
+  { brief: o.message`Manage pull requests`, description: o.message`Work with GitHub pull requests.` },
 );
