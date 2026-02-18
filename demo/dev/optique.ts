@@ -16,7 +16,7 @@ import {
 } from "@optique/core";
 import { run } from "@optique/run";
 
-import * as pkg from "../package.json";
+import * as pkg from "../../package.json";
 
 // Global flags - on every command.
 // Note: optique has no built-in counter flag type; multiple() + map() simulates

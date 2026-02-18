@@ -1,6 +1,6 @@
 import { boolean, command, number, positional, run, string } from "@drizzle-team/brocli";
 
-import * as pkg from "../package.json";
+import * as pkg from "../../package.json";
 
 // Global flags — on every command.
 // Note: brocli does not have a counter flag type. `number` is used for

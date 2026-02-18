@@ -1,7 +1,7 @@
 import * as c from "cmd-ts";
 import { createVercelFormatter, vercelFormatter } from "cmd-ts/dist/esm/batteries/vercel-formatter";
 
-import * as pkg from "../package.json";
+import * as pkg from "../../package.json";
 
 // Counter type for --verbose: counts how many times the flag was passed.
 // cmd-ts does not have a built-in counter; we use multiflag with a custom Type.

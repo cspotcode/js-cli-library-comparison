@@ -1,0 +1,4 @@
+import '../../base.just'
+
+optique *ARGS:
+  bun "./optique/main.ts" "$@"

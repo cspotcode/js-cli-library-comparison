@@ -16,7 +16,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
-import * as pkg from "../package.json";
+import * as pkg from "../../package.json";
 
 export interface LocalContext extends CommandContext, StricliAutoCompleteContext {
   readonly process: NodeJS.Process;
@@ -235,7 +235,8 @@ const editCommand = buildCommand({
       ...commonFlagParams.flags,
       ...scopeFlagParams.flags,
       editor: {
-        brief: "Override the IDE or code editor to launch. Alternative editors are configured by name in the config file.",
+        brief:
+          "Override the IDE or code editor to launch. Alternative editors are configured by name in the config file.",
         kind: "parsed",
         parse: String,
         placeholder: "EDITOR",
@@ -266,7 +267,8 @@ const cloneCommand = buildCommand({
       ...commonFlagParams.flags,
       ...scopeFlagParams.flags,
       dupe: {
-        brief: "Skip the cross-OS duplicate check and allow cloning even if the repo already exists on the peer OS.",
+        brief:
+          "Skip the cross-OS duplicate check and allow cloning even if the repo already exists on the peer OS.",
         kind: "boolean",
         optional: true,
       },
@@ -302,7 +304,10 @@ const nestedRouteMap = buildRouteMap({
   routes: {
     foo: buildCommand({
       func: async (_: CommonFlags) => {},
-      parameters: { flags: { ...commonFlagParams.flags }, aliases: { ...commonFlagParams.aliases } },
+      parameters: {
+        flags: { ...commonFlagParams.flags },
+        aliases: { ...commonFlagParams.aliases },
+      },
       docs: {
         brief: "Placeholder nested subcommand foo.",
         fullDescription:
@@ -311,7 +316,10 @@ const nestedRouteMap = buildRouteMap({
     }),
     bar: buildCommand({
       func: async (_: CommonFlags) => {},
-      parameters: { flags: { ...commonFlagParams.flags }, aliases: { ...commonFlagParams.aliases } },
+      parameters: {
+        flags: { ...commonFlagParams.flags },
+        aliases: { ...commonFlagParams.aliases },
+      },
       docs: {
         brief: "Placeholder nested subcommand bar.",
         fullDescription:
@@ -365,7 +373,8 @@ const routes = buildRouteMap({
   },
   docs: {
     brief: "My helper CLI for navigating git projects.",
-    fullDescription: "A helper CLI for navigating and managing git projects across WSL and Windows.",
+    fullDescription:
+      "A helper CLI for navigating and managing git projects across WSL and Windows.",
     hideRoute: {
       install: true,
       uninstall: true,

@@ -1,6 +1,6 @@
 import { Builtins, Cli, Command, Option } from "clipanion";
 
-import * as pkg from "../package.json";
+import * as pkg from "../../package.json";
 
 // Global flags, available on all commands
 abstract class CommonCommand extends Command {

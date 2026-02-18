@@ -4,7 +4,7 @@ import type { Argv } from "yargs";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
-import * as pkg from "../package.json";
+import * as pkg from "../../package.json";
 
 // Adds scope flags to a command builder and groups them under "Scope:".
 // Generic parameter <T> with inferred return type allows @types/yargs to
