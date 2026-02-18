@@ -1,7 +1,7 @@
 import '../../base.just'
 
-@_divider NAME:
-  bun --eval 'console.log("\n\x1b[30;47m" + " " + process.argv[1] + " ".repeat(process.stdout.columns - process.argv[1].length - 1) + "\x1b[0m\n")' "$@"
+@_divider *ARGS:
+  bun --eval 'console.log("\n\x1b[30;47m" + " " + (process.argv[1] ?? "") + " ".repeat(process.stdout.columns - (process.argv[1]?.length ?? 0) - 1) + "\x1b[0m\n")' "$@"
 
 # Execute all CLI demos, passing the same set of positional arguments and flags
 all *ARGS:
