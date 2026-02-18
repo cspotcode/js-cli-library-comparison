@@ -23,4 +23,4 @@ Comparing different options, also serves as a quick-start reference for the futu
 ### Docsite generators & hosting
 
 > [!TODO]
-> make separate repo for this comparison b/c it straddles language ecosystems*
+> make separate repo for this comparison b/c it straddles language ecosystems
