@@ -1,17 +1,26 @@
-# Comparison of JS libraries for CLIs: Argument parsing and (sub)command abstractions
+# Library comparisons for implementing TS CLIs
 
-Implements the same stubbed example CLI in each library.
+Comparing different options, also serves as a quick-start reference for the future, with working coding examples.
 
-## Examples
+> [!NOTE]
+> When working on these examples, open IDE in subdirectory, not at the root. All categories kept in one repo to consolidate and avoid forgetting about peer repos in the future, but each subdirectory should be considered an independent project with independent boilerplate.
 
-- `dev`: a personal idea, simple clone manager
-- `gh`: the Github CLI
+## Categories
 
-`just demo` to run them. Uses `just` submodules to expose each demo.
+*Note to self: see also personal Edge Workspace w/links*
 
-# Reference
+### Arg parsers, subcommand abstractions, tab completions
+- see `./argparsers`
 
-See also:  
-https://clig.dev
+### Loggers
 
-Great reference for best-practices
+### ANSI / TUI table rendering
+
+### TUI interactive prompts
+
+### Bundlers
+
+### Docsite generators & hosting
+
+> [!TODO]
+> make separate repo for this comparison b/c it straddles language ecosystems*
